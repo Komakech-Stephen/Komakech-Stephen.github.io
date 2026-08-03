@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About · Komakech Stephen</title>
+    <meta name="description" content="About Komakech Stephen — Cybersecurity Professional, AI Researcher, Quality Assurance Executive. Biography, education, career timeline, and mission statement.">
+    <meta name="author" content="Komakech Stephen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About — Komakech Stephen">
+    <meta property="og:description" content="Cybersecurity Professional & AI Researcher pursuing MSc in Artificial Intelligence. Biography, education, and career journey.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://komakech-stephen.github.io/about/">
+    <meta property="og:image" content="https://komakech-stephen.github.io/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Komakech Stephen — Cybersecurity Professional">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://komakech-stephen.github.io/assets/images/og-image.png">
+
+    <link rel="canonical" href="https://komakech-stephen.github.io/about/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4aa'/%3E%3Cstop offset='100%25' style='stop-color:%2300a3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='72' text-anchor='middle' fill='%230a0e14' font-family='Inter,sans-serif' font-weight='900' font-size='62'%3EK%3C/text%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        /* About Page Custom Styles */
+        .about-hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            margin-bottom: 3rem;
+        }
+
+        .about-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .about-hero .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-hero .description {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .hero-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-badge svg {
+            color: var(--accent-primary);
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .about-section {
+            margin-bottom: 4rem;
+        }
+
+        .about-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .about-section h2::before {
+            content: '';
+            width: 4px;
+            height: 2rem;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        /* Professional Profile */
+        .profile-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* Research Focus Cards */
+        .research-focus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .focus-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+
+        .focus-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-primary);
+        }
+
+        .focus-card .icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .focus-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .focus-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .focus-card li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0;
+        }
+
+        /* Research Vision */
+        .vision-box {
+            background: var(--gradient-primary);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            color: #FFFFFF;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* Education Timeline */
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .education-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 2rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+        }
+
+        .education-card::after {
+            content: '';
+            position: absolute;
+            left: 1.4rem;
+            top: 2rem;
+            width: 2px;
+            height: calc(100% - 2rem);
+            background: var(--border-color);
+        }
+
+        .education-card:last-child::after {
+            display: none;
+        }
+
+        .education-year {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--accent-primary);
+            font-family: var(--font-mono);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+
+        .education-institution {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-details {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* Experience Cards */
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .experience-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+        }
+
+        .experience-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent-primary);
+        }
+
+        .experience-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--text-primary);
+        }
+
+        .experience-card .company {
+            font-size: 0.95rem;
+            color: var(--accent-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-card .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .experience-card .tag {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+        }
+
+        /* Expertise Categories */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .expertise-category {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+
+        .expertise-category h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .expertise-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .expertise-category li {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            padding: 0.25rem 0;
+        }
+
+        /* Career Objectives */
+        .objectives-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .objective-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+        }
+
+        .objective-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+
+        .objective-item p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Professional Values */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .value-card .icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .value-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .value-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-primary);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        .cta-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #FFFFFF;
+        }
+
+        .cta-section h2::before {
+            display: none;
+        }
+
+        .cta-section .opportunities {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .cta-section .opportunity {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+        }
+
+        .cta-section .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-section .btn {
+            background: #FFFFFF;
+            color: var(--accent-primary);
+            border: none;
+        }
+
+        .cta-section .btn:hover {
+            background: var(--bg-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-badges,
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .education-card {
+                padding-left: 1.5rem;
+            }
+
+            .education-card::before {
+                left: 0.5rem;
+            }
+
+            .education-card::after {
+                left: 0.9rem;
+            }
+        }
+    </style>
+
+    <!-- JSON-LD Person schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Komakech Stephen",
+      "jobTitle": "Cybersecurity Professional",
+      "url": "https://komakech-stephen.github.io",
+      "email": "cybercon.UG@proton.me",
+      "telephone": "+256 777 982 790",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kampala",
+        "addressCountry": "UG"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/komakech-stephen-7835b2117",
+        "https://github.com/Komakech-Stephen",
+        "https://komakech-stephen.github.io"
+      ],
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "ISBAT University"
+      }
+    }
+    </script>
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-CULpUfeL2Juc-qRc9ARc9.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="../index.html" class="nav-logo">KS<span class="accent">.</span></a>
+        <ul class="nav-menu">
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html" class="nav-link active">About</a></li>
+            <li><a href="../index.html#research" class="nav-link">Research</a></li>
+            <li><a href="../index.html#portfolio" class="nav-link">Projects</a></li>
+            <li><a href="../index.html#timeline" class="nav-link">Experience</a></li>
+            <li><a href="../index.html#expertise" class="nav-link">Skills</a></li>
+            <li><a href="../index.html#certifications" class="nav-link">Certifications</a></li>
+            <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+            <li><div class="theme-toggle-wrapper">
+                <button class="theme-btn" data-theme="dark" aria-label="Dark theme" title="Dark theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="theme-btn" data-theme="light" aria-label="Light theme" title="Light theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                </button>
+                <button class="theme-btn" data-theme="terminal" aria-label="Terminal theme" title="Terminal theme">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                </button>
+            </div></li>
+        </ul>
+        <button class="nav-toggle" id="mobile-menu" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </div>
+</nav>
+
+<main id="main-content" class="post-main">
+    <article class="post-article about-article">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <h1>About Me</h1>
+            <p class="subtitle">Cybersecurity Engineer • AI Researcher • ICT Professional</p>
+            <p class="description">Building intelligent cybersecurity systems through Artificial Intelligence, Security Operations, and Automation.</p>
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    First Class Honours Graduate (CGPA 4.40/5.00)
+                </div>
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Cybersecurity & Network Engineering
+                </div>
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                    AI for Cyber Defense Research
+                </div>
+                <div class="hero-badge">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    Uganda
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="../assets/resume/chima-ukachukwu-resume.pdf" class="btn btn-primary" download>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download CV
+                </a>
+                <a href="../research-proposal.html" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    View Research
+                </a>
+                <a href="https://github.com/Komakech-Stephen" target="_blank" class="btn btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- Professional Profile -->
+        <section class="about-section">
+            <h2>Professional Profile</h2>
+            <div class="profile-box">
+                <p>I am a Cybersecurity Engineer and Artificial Intelligence researcher with expertise in enterprise security, network administration, security operations, and intelligent automation.</p>
+                <p>My professional journey combines over six years of leadership in quality assurance with hands-on experience in ICT support, cybersecurity operations, and AI-driven security research. This multidisciplinary background enables me to approach security challenges with strong analytical thinking, structured processes, and practical engineering solutions.</p>
+                <p>My current research focuses on designing autonomous AI-powered cyber defense platforms that integrate Security Operations Centers (SOC), large language models, automated penetration testing, explainable AI, and intelligent threat detection.</p>
+                <p>I am actively seeking MSc scholarship opportunities and research collaborations in Artificial Intelligence, Cybersecurity, Machine Learning, and Autonomous Security Systems.</p>
+            </div>
+        </section>
+
+        <!-- Research Focus -->
+        <section class="about-section">
+            <h2>Research Interests</h2>
+            <div class="research-focus-grid">
+                <div class="focus-card">
+                    <div class="icon">🧠</div>
+                    <h3>Artificial Intelligence</h3>
+                    <ul>
+                        <li>AI Agents</li>
+                        <li>Large Language Models</li>
+                        <li>Explainable AI</li>
+                        <li>Autonomous Systems</li>
+                    </ul>
+                </div>
+                <div class="focus-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>Security Operations Centers</li>
+                        <li>Threat Detection</li>
+                        <li>Incident Response</li>
+                        <li>Threat Intelligence</li>
+                    </ul>
+                </div>
+                <div class="focus-card">
+                    <div class="icon">🔍</div>
+                    <h3>Offensive Security</h3>
+                    <ul>
+                        <li>Automated Penetration Testing</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>MITRE ATT&CK</li>
+                        <li>Red Team Automation</li>
+                    </ul>
+                </div>
+                <div class="focus-card">
+                    <div class="icon">🌐</div>
+                    <h3>Network Security</h3>
+                    <ul>
+                        <li>Enterprise Networks</li>
+                        <li>Zero Trust</li>
+                        <li>Cloud Security</li>
+                        <li>Wireless Security</li>
+                    </ul>
+                </div>
+                <div class="focus-card">
+                    <div class="icon">📱</div>
+                    <h3>IoT & Smart Infrastructure</h3>
+                    <ul>
+                        <li>Smart Home Security</li>
+                        <li>Industrial IoT</li>
+                        <li>Critical Infrastructure</li>
+                        <li>Edge AI</li>
+                    </ul>
+                </div>
+                <div class="focus-card">
+                    <div class="icon">🔬</div>
+                    <h3>Digital Forensics</h3>
+                    <ul>
+                        <li>Incident Investigation</li>
+                        <li>Log Analysis</li>
+                        <li>Malware Investigation</li>
+                        <li>Evidence Collection</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Vision -->
+        <section class="about-section">
+            <h2>Research Vision</h2>
+            <div class="vision-box">
+                <p>My long-term goal is to contribute to the development of next-generation autonomous cybersecurity systems capable of detecting, explaining, and responding to cyber threats with minimal human intervention.</p>
+                <p>I aspire to conduct research that bridges Artificial Intelligence, Cybersecurity, Human-Centered Security, and Explainable AI while developing practical open-source solutions for governments, universities, healthcare, and critical infrastructure.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section class="about-section">
+            <h2>Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <div class="education-year">2026</div>
+                    <h3>Bachelor of Science in Networking & Cybersecurity</h3>
+                    <p class="education-institution">ISBAT University</p>
+                    <p class="education-details">First Class Honours • CGPA 4.40 / 5.00</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">2013–2018</div>
+                    <h3>Bachelor of Science in Chemical Engineering</h3>
+                    <p class="education-institution">Kyambogo University</p>
+                    <p class="education-details">Second Class Honours</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-year">Additional Training</div>
+                    <h3>Professional Certifications</h3>
+                    <p class="education-institution">Google IT Support • UN Information Security • Cybersecurity Certifications</p>
+                    <p class="education-details">Professional Development</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section class="about-section">
+            <h2>Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <h3>Senior Executive</h3>
+                    <p class="company">Quality Assurance • Agri Exim Ltd</p>
+                    <div class="tags">
+                        <span class="tag">Leadership</span>
+                        <span class="tag">Compliance</span>
+                        <span class="tag">Risk Management</span>
+                        <span class="tag">Quality Systems</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <h3>ICT Intern</h3>
+                    <p class="company">United Nations Regional Service Centre Entebbe</p>
+                    <div class="tags">
+                        <span class="tag">Enterprise ICT</span>
+                        <span class="tag">Cybersecurity</span>
+                        <span class="tag">Training</span>
+                        <span class="tag">Technical Support</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <h3>ICT Volunteer</h3>
+                    <p class="company">Technical Support</p>
+                    <div class="tags">
+                        <span class="tag">Network Administration</span>
+                        <span class="tag">Cybersecurity Awareness</span>
+                        <span class="tag">Help Desk</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Expertise -->
+        <section class="about-section">
+            <h2>Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="expertise-category">
+                    <h3>Cybersecurity</h3>
+                    <ul>
+                        <li>SOC</li>
+                        <li>SIEM</li>
+                        <li>Incident Response</li>
+                        <li>Threat Hunting</li>
+                        <li>Digital Forensics</li>
+                    </ul>
+                </div>
+                <div class="expertise-category">
+                    <h3>Artificial Intelligence</h3>
+                    <ul>
+                        <li>Machine Learning</li>
+                        <li>LLMs</li>
+                        <li>Prompt Engineering</li>
+                        <li>RAG</li>
+                        <li>AI Automation</li>
+                    </ul>
+                </div>
+                <div class="expertise-category">
+                    <h3>Networking</h3>
+                    <ul>
+                        <li>Cisco</li>
+                        <li>MikroTik</li>
+                        <li>VPN</li>
+                        <li>Windows Server</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+                <div class="expertise-category">
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>PowerShell</li>
+                        <li>Bash</li>
+                        <li>SQL</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Objectives -->
+        <section class="about-section">
+            <h2>Career Objectives</h2>
+            <div class="objectives-list">
+                <div class="objective-item">
+                    <h3>Short Term</h3>
+                    <p>Complete an MSc in Artificial Intelligence while conducting research in AI-powered cybersecurity.</p>
+                </div>
+                <div class="objective-item">
+                    <h3>Medium Term</h3>
+                    <p>Publish research in leading cybersecurity and AI conferences while contributing to open-source security projects.</p>
+                </div>
+                <div class="objective-item">
+                    <h3>Long Term</h3>
+                    <p>Lead research in Autonomous Cyber Defense and establish AI-driven cybersecurity solutions for critical infrastructure across Africa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Values -->
+        <section class="about-section">
+            <h2>Professional Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon">💡</div>
+                    <h3>Innovation</h3>
+                    <p>Applying AI to solve real-world cybersecurity challenges.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Integrity</h3>
+                    <p>Building secure, ethical, and trustworthy systems.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">📚</div>
+                    <h3>Continuous Learning</h3>
+                    <p>Advancing through research, collaboration, and lifelong learning.</p>
+                </div>
+                <div class="value-card">
+                    <div class="icon">🌍</div>
+                    <h3>Impact</h3>
+                    <p>Creating affordable cybersecurity solutions for developing countries.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="about-section">
+            <div class="cta-section">
+                <h2>Let's Build the Future of AI Security</h2>
+                <p>I welcome opportunities for</p>
+                <div class="opportunities">
+                    <span class="opportunity">MSc Scholarships</span>
+                    <span class="opportunity">Research Collaboration</span>
+                    <span class="opportunity">Graduate Research Assistantships</span>
+                    <span class="opportunity">Cybersecurity Engineering Roles</span>
+                    <span class="opportunity">Conference Speaking</span>
+                    <span class="opportunity">Open-Source Collaboration</span>
+                </div>
+                <div class="cta-buttons">
+                    <a href="../assets/resume/chima-ukachukwu-resume.pdf" class="btn" download>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download CV
+                    </a>
+                    <a href="../research-proposal.html" class="btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Research Portfolio
+                    </a>
+                    <a href="https://github.com/Komakech-Stephen" target="_blank" class="btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/komakech-stephen-7835b2117" target="_blank" class="btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:cybercon.UG@proton.me" class="btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="footer-logo">KS<span class="accent">.</span></span>
+            <p class="footer-tagline">Cybersecurity Professional & AI Researcher</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Komakech Stephen. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    /* ---------- THEME SWITCHER ---------- */
+    function initTheme() {
+        const themeButtons = document.querySelectorAll('.theme-btn');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        html.setAttribute('data-theme', savedTheme);
+        
+        // Update active button
+        themeButtons.forEach(btn => {
+            if (btn.getAttribute('data-theme') === savedTheme) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        if (!themeButtons.length) return;
+        
+        themeButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const newTheme = btn.getAttribute('data-theme');
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                
+                // Update active button
+                themeButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    }
+
+    /* ---------- MOBILE MENU ---------- */
+    function initMobileMenu() {
+        const toggle = document.getElementById('mobile-menu');
+        const menu = document.querySelector('.nav-menu');
+        const links = document.querySelectorAll('.nav-link');
+
+        if (!toggle || !menu) return;
+
+        toggle.addEventListener('click', () => {
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+            toggle.setAttribute('aria-expanded', !isExpanded);
+            toggle.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        initTheme();
+        initMobileMenu();
+    });
+</script>
+
+</body>
+</html>

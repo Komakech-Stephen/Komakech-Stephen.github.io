@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Komakech Stephen — Writing</title>
+    <description>Notes on cybersecurity, network security, quality assurance, and ICT operations.</description>
+    <link>https://komakech-stephen.github.io/blog/</link>
+    <atom:link href="https://komakech-stephen.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <managingEditor>cybercon.UG@proton.me (Komakech Stephen)</managingEditor>
+    <webMaster>cybercon.UG@proton.me (Komakech Stephen)</webMaster>
+    <copyright>© 2026 Komakech Stephen</copyright>
+    <lastBuildDate>Mon, 02 Aug 2026 12:00:00 +0300</lastBuildDate>
+    <generator>Hand-maintained — no SSG. To add a new post: copy this item block, update the four fields.</generator>
+
+  </channel>
+</rss>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Firewall & IDS/IPS Deployment — Case Study · Komakech Stephen</title>
+    <meta name="description" content="Configuring Sophos and pfSense firewall environments and deploying IDS/IPS tools including Snort, Suricata, and Wazuh for network defense in a home lab environment.">
+    <meta name="author" content="Komakech Stephen">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Firewall & IDS/IPS Deployment — Case Study">
+    <meta property="og:description" content="Configuring Sophos and pfSense firewall environments and deploying IDS/IPS tools for network defense.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://komakech-stephen.github.io/portfolio/case-studies/firewall-ids-deployment.html">
+    <meta property="og:image" content="https://komakech-stephen.github.io/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Komakech Stephen — Cybersecurity Professional & Quality Assurance Executive">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://komakech-stephen.github.io/assets/images/og-image.png">
+
+    <link rel="canonical" href="https://komakech-stephen.github.io/portfolio/case-studies/firewall-ids-deployment.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4aa'/%3E%3Cstop offset='100%25' style='stop-color:%2300a3ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='url(%23g)'/%3E%3Ctext x='50' y='72' text-anchor='middle' fill='%230a0e14' font-family='Inter,sans-serif' font-weight='900' font-size='62'%3EK%3C/text%3E%3C/svg%3E">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <!-- JSON-LD Article schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Firewall & IDS/IPS Deployment — Case Study",
+      "description": "Configuring Sophos and pfSense firewall environments and deploying IDS/IPS tools for network defense.",
+      "author": { "@type": "Person", "name": "Komakech Stephen", "url": "https://komakech-stephen.github.io" },
+      "datePublished": "2026-08-02",
+      "url": "https://komakech-stephen.github.io/portfolio/case-studies/firewall-ids-deployment.html",
+      "image": "https://komakech-stephen.github.io/assets/images/og-image.png"
+    }
+    </script>
+
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-CULpUfeL2Juc-qRc9ARc9.js"></script>
+    <script>
+        window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+        plausible.init()
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="../../index.html" class="nav-logo">KS<span class="accent">.</span></a>
+        <ul class="nav-menu">
+            <li><a href="../../index.html" class="nav-link">Home</a></li>
+            <li><a href="../../blog/index.html" class="nav-link">Writing</a></li>
+            <li><a href="../../index.html#portfolio" class="nav-link">Portfolio</a></li>
+            <li><a href="../../resume/index.html" class="nav-link">Resume</a></li>
+            <li><a href="../../index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main id="main-content" class="post-main">
+    <article class="post-article">
+        <header class="post-header">
+            <p class="post-eyebrow"><a href="../../index.html#portfolio">← Portfolio</a></p>
+            <h1 class="post-title">Firewall & IDS/IPS Deployment</h1>
+            <p class="post-dek">Configuring Sophos and pfSense firewall environments and deploying IDS/IPS tools including Snort, Suricata, and Wazuh for network defense in a home lab environment.</p>
+            <p class="post-meta">
+                <span class="post-meta-item">Home Lab Project</span>
+                <span class="post-meta-divider">·</span>
+                <span class="post-meta-item">pfSense · Sophos · Snort · Suricata · Wazuh</span>
+            </p>
+        </header>
+
+        <div class="post-body">
+
+            <h2>Overview</h2>
+
+            <p>This project demonstrates practical network security implementation through firewall configuration and intrusion detection/prevention system deployment. The goal was to build a layered defense-in-depth architecture for a home lab environment that could detect and block malicious network traffic.</p>
+
+            <h2>Architecture</h2>
+
+            <p>The network security implementation uses a multi-layered approach:</p>
+
+            <ul>
+                <li><strong>Firewall Layer</strong> — pfSense and Sophos firewalls for network segmentation and access control</li>
+                <li><strong>IDS/IPS Layer</strong> — Snort and Suricata for signature-based intrusion detection</li>
+                <li><strong>EDR Layer</strong> — Wazuh for endpoint detection and response</li>
+                <li><strong>Monitoring Layer</strong> — Centralized logging and alerting</li>
+            </ul>
+
+            <h2>Firewall Configuration</h2>
+
+            <h3>pfSense Setup</h3>
+
+            <ul>
+                <li>Installed pfSense on dedicated firewall hardware</li>
+                <li>Configured WAN and LAN interfaces with proper IP addressing</li>
+                <li>Set up VLANs for network segmentation (DMZ, IoT, Guest networks)</li>
+                <li>Implemented firewall rules for inter-VLAN traffic control</li>
+                <li>Configured NAT and port forwarding for specific services</li>
+            </ul>
+
+            <h3>Sophos Firewall</h3>
+
+            <ul>
+                <li>Deployed Sophos XG Firewall as secondary security layer</li>
+                <li>Configured web application firewall (WAF) rules</li>
+                <li>Set up SSL inspection for encrypted traffic analysis</li>
+                <li>Implemented application control policies</li>
+            </ul>
+
+            <h2>IDS/IPS Deployment</h2>
+
+            <h3>Snort Configuration</h3>
+
+            <ul>
+                <li>Installed and configured Snort on pfSense</li>
+                <li>Downloaded and updated Snort rules from Snort.org</li>
+                <li>Configured Snort for inline IPS mode</li>
+                <li>Tuned rules to reduce false positives</li>
+                <li>Set up custom rules for specific threat scenarios</li>
+            </ul>
+
+            <h3>Suricata Setup</h3>
+
+            <ul>
+                <li>Deployed Suricata as alternative IDS/IPS engine</li>
+                <li>Configured Emerging Threats (ET) rules</li>
+                <li>Set up Suricata for HTTP and DNS inspection</li>
+                <li>Integrated with Elasticsearch for log storage</li>
+            </ul>
+
+            <h3>Wazuh Implementation</h3>
+
+            <ul>
+                <li>Deployed Wazuh server for centralized security monitoring</li>
+                <li>Installed Wazuh agents on all endpoints</li>
+                <li>Configured file integrity monitoring (FIM)</li>
+                <li>Set up rootkit detection</li>
+                <li>Implemented security configuration assessment</li>
+            </ul>
+
+            <h2>Key Features</h2>
+
+            <ul>
+                <li><strong>Defense in Depth</strong> — Multiple security layers for comprehensive protection</li>
+                <li><strong>Real-time Detection</strong> — Immediate alerting on security events</li>
+                <li><strong>Network Segmentation</strong> — VLAN-based isolation for different network zones</li>
+                <li><strong>Traffic Inspection</strong> — Deep packet inspection for threat detection</li>
+                <li><strong>Centralized Management</strong> — Single console for security policy management</li>
+            </ul>
+
+            <h2>Challenges and Solutions</h2>
+
+            <p><strong>Challenge:</strong> High false positive rates from IDS rules</p>
+            <p><strong>Solution:</strong> Implemented rule tuning and whitelist configurations for legitimate traffic</p>
+
+            <p><strong>Challenge:</strong> Performance impact from SSL inspection</p>
+                <p><strong>Solution:</strong> Selective SSL inspection for high-risk traffic only</p>
+
+            <p><strong>Challenge:</strong> Managing multiple security consoles</p>
+            <p><strong>Solution:</strong> Integrated all systems into centralized SIEM for unified monitoring</p>
+
+            <h2>What I Learned</h2>
+
+            <ul>
+                <li>Practical experience with enterprise firewall configuration</li>
+                <li>Understanding of IDS/IPS rule management and tuning</li>
+                <li>Network segmentation best practices</li>
+                <li>Integration of multiple security tools into cohesive architecture</li>
+                <li>Performance optimization for security appliances</li>
+            </ul>
+
+            <h2>Future Enhancements</h2>
+
+            <ul>
+                <li>Implementation of zero-trust network architecture</li>
+                <li>Integration with threat intelligence feeds</li>
+                <li>Automated incident response playbooks</li>
+                <li>Advanced persistent threat (APT) detection capabilities</li>
+            </ul>
+
+        </div>
+
+        <footer class="post-footer">
+            <p class="post-author-card">
+                <strong>Built by Komakech Stephen.</strong> Cybersecurity Professional &amp; Quality Assurance Executive based in Uganda. This project is part of my cybersecurity portfolio demonstrating network security implementation skills.
+                <br><br>
+                <a href="../../index.html#contact">Get in touch →</a> · <a href="https://linkedin.com/in/komakech-stephen-7835b2117" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/Komakech-Stephen" target="_blank" rel="noopener">GitHub</a>
+            </p>
+
+            <p class="post-back"><a href="../../index.html#portfolio">← Back to portfolio</a></p>
+        </footer>
+    </article>
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="footer-logo">KS<span class="accent">.</span></span>
+            <p>Cybersecurity Professional &amp; Quality Assurance Executive</p>
+        </div>
+        <div class="footer-links">
+            <a href="../../index.html#home">Home</a>
+            <a href="../../blog/index.html">Writing</a>
+            <a href="../../index.html#portfolio">Portfolio</a>
+            <a href="../../resume/index.html">Resume</a>
+            <a href="../../index.html#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://linkedin.com/in/komakech-stephen-7835b2117" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/Komakech-Stephen" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="mailto:cybercon.UG@proton.me" aria-label="Email">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12 13 2,6"/></svg>
+            </a>
+        </div>
+        <p class="footer-copyright">© 2026 Komakech Stephen</p>
+    </div>
+</footer>
+
+</body>
+</html>
